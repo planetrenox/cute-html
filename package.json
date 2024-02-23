@@ -1,0 +1,21 @@
+{
+  "name": "cute-html",
+  "version": "0.2.2",
+  "description": "cute-html.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "postinstall": "echo 'cute-html yay'",
+    "index": "node ./src/index.js"
+  },
+  "exports": "./src/index.js",
+  "keywords": [
+    "cute"
+  ],
+  "author": "",
+  "license": "CC-BY-4.0",
+  "homepage": "",
+  "dependencies": {
+    "lit-html": "^3.1.2"
+  }
+}
