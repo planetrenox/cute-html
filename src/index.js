@@ -1,5 +1,7 @@
 import {html as litHtml, render} from 'lit-html';
+import {_ as _con} from 'cute-con';
 export const html = litHtml;
+export const _ = _con;
 
 export const $ = (selector) =>
 {
@@ -44,4 +46,3 @@ export const $$ = (selector) =>
     elements.show = () => elements.forEach((el) => el.style.display = '');
     return elements;
 };
-export const _ = msg => console.log(msg); // _('hello')
