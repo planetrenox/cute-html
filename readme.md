@@ -1,3 +1,5 @@
+https://www.npmjs.com/package/cute-html
+
 # cute-html
 
 A small library designed to enhance the way you interact with the DOM using modern JavaScript.

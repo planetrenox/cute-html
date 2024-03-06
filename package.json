@@ -1,22 +1,28 @@
 {
   "name": "cute-html",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "cute-html.",
   "type": "module",
-  "module": "dist/index.esm.js",
-  "main": "dist/index.cjs.js",
+  "module": "index.esm.js",
+  "main": "index.cjs.js",
   "scripts": {
-    "build": "(npx rollup --config) || mkdir -p dist"
+    "prepublishOnly": "npm run build",
+    "build": "npx rollup --config",
+    "postpublish": "npx shx rm index.esm.js && npx shx rm index.cjs.js"
   },
-  "keywords": [
-    "cute"
-  ],
   "files": [
-    "dist"
+    "index.esm.js", "index.cjs.js"
   ],
+  "exports": {
+    "import": "./index.esm.js",
+    "require": "./index.cjs.js"
+  },
   "author": "planetrenox",
   "license": "CC-BY-4.0",
   "homepage": "",
+  "keywords": [
+    "cute"
+  ],
   "dependencies": {
     "cute-con": "^1.0.0",
     "lit-html": "^3.1.2"
