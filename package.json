@@ -2,14 +2,13 @@
   "name": "cute-html",
   "version": "0.2.4",
   "description": "cute-html.",
-  "source": "index.js",
   "main": "dist/index.js",
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "uniport"
   },
   "files": [
-    "index.js", "dist"
+    "src", "dist"
   ],
   "author": "planetrenox",
   "license": "CC-BY-4.0",
