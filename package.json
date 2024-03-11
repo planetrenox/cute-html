@@ -3,7 +3,7 @@
   "version": "0.3.3",
   "description": "cute-html.",
   "main": "dist/uniport.js",
-  'module': "dist/uniport.js",
+  "module": "dist/uniport.js",
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "uniport"
