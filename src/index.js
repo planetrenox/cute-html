@@ -1,7 +1,5 @@
-import {html as litHtml, render} from 'lit-html';
-import {_ as _con} from 'cute-con';
-export const html = litHtml;
-export const _ = _con;
+export { html, render } from 'lit-html';
+export { _ } from 'cute-con';
 
 export const $ = (selector) =>
 {
@@ -21,7 +19,6 @@ export const $ = (selector) =>
         render(content, tempContainer.content);
         el.appendChild(tempContainer.content.cloneNode(true));
     };
-
     el.on = (event, handler) => el.addEventListener(event, handler);
     el.click = (handler) => el.addEventListener('click', handler);
     el.hide = () => el.style.display = 'none';
@@ -45,4 +42,12 @@ export const $$ = (selector) =>
     elements.hide = () => elements.forEach((el) => el.style.display = 'none');
     elements.show = () => elements.forEach((el) => el.style.display = '');
     return elements;
+};
+
+(typeof window !== 'undefined') && {
+window.$ = $;
+window.html = html;
+window._ = _;
+window.render =render;
+window.$$ = $$;
 };
