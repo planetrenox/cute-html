@@ -3,20 +3,15 @@
   "version": "0.2.4",
   "description": "cute-html.",
   "type": "module",
-  "module": "index.esm.js",
-  "main": "index.cjs.js",
+  "module": "dist/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "prepublishOnly": "npm run build",
-    "build": "npx rollup --config",
-    "postpublish": "npx shx rm index.esm.js && npx shx rm index.cjs.js"
+    "build": "uniport"
   },
   "files": [
-    "index.esm.js", "index.cjs.js"
+    "index.js", "dist"
   ],
-  "exports": {
-    "import": "./index.esm.js",
-    "require": "./index.cjs.js"
-  },
   "author": "planetrenox",
   "license": "CC-BY-4.0",
   "homepage": "",
@@ -28,6 +23,6 @@
     "lit-html": "^3.1.2"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.2.3"
+    "uniport": "latest"
   }
 }
