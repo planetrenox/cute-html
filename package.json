@@ -1,12 +1,8 @@
 {
   "name": "cute-html",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "cute-html.",
   "main": "./dist/uniport.js",
-  "exports": {
-    "require": "./dist/uniport.js",
-    "default": "./dist/uniport.js"
-  },
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "uniport"
