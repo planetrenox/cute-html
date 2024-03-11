@@ -1,6 +1,6 @@
 {
   "name": "cute-html",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "cute-html.",
   "main": "./dist/uniport.js",
   "module": "./dist/uniport.js",
