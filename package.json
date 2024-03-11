@@ -2,7 +2,6 @@
   "name": "cute-html",
   "version": "0.2.4",
   "description": "cute-html.",
-  "type": "module",
   "module": "dist/index.js",
   "main": "dist/index.js",
   "scripts": {
