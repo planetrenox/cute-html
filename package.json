@@ -2,8 +2,7 @@
   "name": "cute-html",
   "version": "0.3.1",
   "description": "cute-html.",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/uniport.js",
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "uniport"
