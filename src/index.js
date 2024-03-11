@@ -44,10 +44,10 @@ export const $$ = (selector) =>
     return elements;
 };
 
-(typeof window !== 'undefined') && {
+if (typeof window !== 'undefined') {
 window.$ = $;
 window.html = html;
 window._ = _;
 window.render =render;
 window.$$ = $$;
-};
+}
