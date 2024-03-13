@@ -2,29 +2,31 @@ https://www.npmjs.com/package/cute-html
 
 # cute-html
 
-A small library designed to enhance the way you interact with the DOM using modern JavaScript.
+A small and intuitive library designed to simplify DOM manipulation and enhance your web development experience. EXPERIMENTAL.
 
 ## Features
 
-- Simplifies DOM manipulation and event handling
-- Integrates smoothly for efficient rendering
-- Offers a concise API for common tasks
-- Enables dynamic content injection and manipulation with minimal boilerplate
+- Support for rendering and injecting various content types:
+    - Strings (plain text and HTML)
+    - HTMLElements
+    - lit-html templates
+- Efficient rendering and content injection
+- Minimalistic and lightweight, with no unnecessary overhead
 
-## Why
+## Why choose cute-html?
 
-This package solves the problem of verbose and repetitive DOM manipulation code in modern web development. It provides a more readable, efficient, and enjoyable way to write interactive web applications.
+`cute-html` simplifies the way you interact with the DOM, making your code more readable, maintainable, and enjoyable to write. It provides a set of powerful and intuitive methods that streamline common tasks, reducing boilerplate and allowing you to focus on building great web applications.
 
 ## Getting Started
 
 ### Installation
 
-1. Install cute-html locally.
+Install `cute-html` locally using npm:
 
 
-   ```
-   npm install cute-html
-   ```
+```
+npm install cute-html
+```
 
 
 ### Usage
@@ -36,42 +38,29 @@ import { $, $$, html, _ } from 'cute-html';
 
 // Shorthand for document.querySelector(selector)
 let el;
-el = $('#example');
-el = $('.example');
+el = $('#withId');
+el = $('.withClass');
+el = $('orHtml'); // like ('body')
 
 // Write clean html component however way (can be multi-line)
 let cute;
 cute = html`<p>I suppose.</p>`;
 cute = (str = 'ye') => html`<p>${str}</p>`; 
-cute = cute("all valid"); // cute and cute()
+cute = cute("all valid");
+cute = '<div>bare</div>';
+cute = 'even string';
+cute = $('#orEntireElement');
 
 // Render html (overwrite)
 $('example').render(cute);
 
-// Inject html (no overwrite)
+// Inject html (appends, no overwrite)
 $('example').inject(html`<div>Additional content</div>`);
 
-// Best part: console.log() is
+// Best part: console.log is
 _('srsly? nooo');
 
-
-// Utility
-const elementsToHide = $$('.elements-to-hide');
-elementsToHide.hide();
-elementsToHide.show();
-$('.example').on('click', () => _('Element clicked'));
-$('.example').click(() => _('Element clicked'));
-$('.example').hide(); // Hide the element
-$('.example').show(); // Show the element
-$('.example').toggle(); // Toggle visibility
-$('.example').addClass('visible'); // Add a class
-$('.example').removeClass('hidden'); // Remove a class
-$('.example').attr('data-role', 'admin'); // Set an attribute
-$('.example').css('background-color', 'blue'); // Set CSS style
-$('.example').scrollTo({behavior: 'smooth'}); // Scroll into view
-_($('.example').attr('data-role')); // Get an attribute
-_($('.example').css('background-color')); // Get CSS style
-_($('.example').id()); // Get the element's ID attribute
-_($('.example').hasClass('visible'));
-// i missed a few
+// Multiple elements. 
+const elements = $$('.elements');
+// All the same methods are supported ...
 ```

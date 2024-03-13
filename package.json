@@ -1,8 +1,9 @@
 {
   "name": "cute-html",
-  "version": "0.3.6",
+  "version": "1.0.1",
   "description": "cute-html.",
   "main": "./dist/uniport.js",
+  "browser": "./dist/cute-html.mjs",
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "uniport"
@@ -11,16 +12,16 @@
   "license": "CC-BY-4.0",
   "homepage": "",
   "keywords": [
-    "cute"
+    "cute", "html", "front-end"
   ],
   "files": [
     "src", "dist"
   ],
   "dependencies": {
-    "cute-con": "^1.0.0",
-    "lit-html": "^3.1.2"
+    "cute-con": "~1.0",
+    "lit-html": "~3.1"
   },
   "devDependencies": {
-    "uniport": "latest"
+    "uniport": "~0.2"
   }
 }
