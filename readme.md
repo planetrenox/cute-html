@@ -19,7 +19,7 @@ A small and intuitive library designed to simplify DOM manipulation and enhance 
 
 ## Getting Started
 
-### Installation
+### Install
 
 Install `cute-html` locally using npm:
 
@@ -29,12 +29,14 @@ npm install cute-html
 ```
 
 
-### Usage
+### Use
 
 Import the library and start using its features in your project:
 
 ```javascript
 import { $, $$, html, _ } from 'cute-html';
+// OR
+import { $, $$, html, _ } from 'https://cdn.jsdelivr.net/npm/cute-html@1.0.2';
 
 // Shorthand for document.querySelector(selector)
 let el;
@@ -52,10 +54,10 @@ cute = 'even string';
 cute = $('#orEntireElement');
 
 // Render html (overwrite)
-$('example').render(cute);
+$('body').render(cute);
 
 // Inject html (appends, no overwrite)
-$('example').inject(html`<div>Additional content</div>`);
+$('body').inject(`<div>Additional content</div>`);
 
 // Best part: console.log is
 _('srsly? nooo');
