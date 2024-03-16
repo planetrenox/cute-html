@@ -1,5 +1,7 @@
 https://www.npmjs.com/package/cute-html
 
+**(FYI: I'm a  junior software dev looking for a job in the US. [email](mailto:planetrenox@protonmail.com))**
+
 # cute-html
 
 A small and intuitive library designed to simplify DOM manipulation and enhance your web development experience. EXPERIMENTAL.
@@ -36,7 +38,7 @@ Import the library and start using its features in your project:
 ```javascript
 import { $, $$, html, _ } from 'cute-html';
 // OR
-import { $, $$, html, _ } from 'https://cdn.jsdelivr.net/npm/cute-html@1.0.2';
+import { $, $$, html, _ } from 'https://cdn.jsdelivr.net/npm/cute-html@1.0.3';
 
 // Shorthand for document.querySelector(selector)
 let el;
