@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="module">
+      import {$, html} from 'https://cdn.jsdelivr.net/npm/cute-html@1.0.1';
+      // $('body').render(html`<p>test 123</p>`);
+      $('body').inject(html`<p>test 123</p>`);
+      $('body').inject($('center'));
+      // $('body').render(`<p>test 1234</p>`);
+      $('body').inject(`<p>test 1234</p>`);
+      $('body').inject(`str`);
+      
+    </script>
+  </head>
+  
+  <body><center>before</center></body>
+</html>
